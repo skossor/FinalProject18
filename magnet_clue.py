@@ -2,77 +2,7 @@ import random
 
 #create a list of choices the player and computer can choose from
 weapons = ['drill', 'laser cutter', 'White Tardis']
-rooms = ['Mrs. Gersteins Room', 'MakerSpace', 'Sanservinos Room']
-suspects = ['Amanda', 'Thomas', 'Mrs. Gerstein']
-
-
-games = {"win" : [(weapons[2], rooms[1], suspects[1]) ]}
-
-name = input ("What is your name?")
-print(f"Hey {name}. Let's play Magnet Clue. Let us explain....")
-#explain rules here
-tries = 3
-game = True
-while game == True:
-
-  room_choice = int(input("What room do you think the murder happened in? Your choices are 1. Mrs. Gersteins Room, 2. Makerspace, 3. Sanservinos Room "))
-
-  if room_choice == 1:
-    print("The murder did not happen in Mrs. Gersteins Room.")
-    rooms = [0]
-  elif room_choice == 2:
-    print("The murder happened in the MakerSpace.")
-    rooms = [1]
-  elif room_choice == 3:
-    print("The murder did not happen in Sanservinos Room.")
-    rooms = [2]
-  else:
-    print("That is not an option!")
-
-  weapon_choice = int(input("What weapon do you think was used? Your choices are 1. Drill, 2. Laser Cutter, 3. White Tardis"))
-
-  if weapon_choice == 1:
-    print("That weapon was not used")
-    weapons = [0]
-
-  elif weapon_choice == 2:
-    print ("That weapon was not used")
-    weapons = [1]
-
-  elif weapon_choice == 3:
-    print("The White Tardis was used to kill the victim.")
-    weapons = [2]
-
-  else:
-    print("That is not an option!")
-
-
-  suspect_choice = int(input("Who do you think did it? Your choices are 1. Amanda, 2. Thomas, 3. Mrs. Gerstein."))
-
-  if suspect_choice == 1:
-    print("Amanda was not the killer.")
-    suspects = [0]
-
-  elif suspect_choice == 2:
-    print ("Thomas is the killer.")
-    suspects = [1]
-
-
-  elif suspect_choice == 3:
-    print ("Mrs. Gerstein was not the killer.")
-    suspects = [2]
-
-  else:
-    print("That is not an option!")
-
-
-
-
-import random
-
-#create a list of choices the player and computer can choose from
-weapons = ['drill', 'laser cutter', 'White Tardis']
-rooms = ['Mrs. Gersteins Room', 'MakerSpace', 'Sanservinos Room']
+rooms = ['Mrs. Gersteins Room', 'the MakerSpace', 'Sanservinos Room']
 suspects = ['Amanda', 'Thomas', 'Raymond']
 
 
@@ -83,6 +13,13 @@ name = input ("What is your name?")
 print(f"Hey {name}. Let's play Magnet Clue. Let us explain....")
 #explain rules here
 
+#def checking():
+  #if int(room_choice) != 1:
+    #print("please only guess one number")
+  #elif room_choice not in rooms:
+    #print(f"please choose one of the three numbers available!")
+  #else:
+    #print(f"choose a differnet character")
 
 
 
@@ -92,45 +29,40 @@ while game == True:
 
   print (games["win"][1])
 
-  room_choice = int(input("What room do you think the murder happened in? Your choices are 1. Mrs. Gersteins Room, 2. Makerspace, 3. Sanservinos Room "))
+  room_choice = int(input("What room do you think the murder happened in? Your choices are 1. Mrs. Gersteins Room, 2. Makerspace, 3. Sanservinos Room ")) - 1
 
 
-  if room_choice == games["win"][1]:
-    print(f"The murder happened in {room_choice}")
+  if rooms[room_choice]  == games["win"][1]:
+    print(f"The murder happened in {rooms[room_choice]}!")
+  elif room_choice != 1:
+    print(f"please only choose one number!")
   else:
-   print(f"The murder did not happen in {room_choice}")
+   print(f"The murder did not happen in {rooms[room_choice]}!")
 
 
 
 
+  print (games["win"][0])
+  weapon_choice = int(input("What weapon do you think was used? Your choices are 1. Drill, 2. Laser Cutter, 3. White Tardis")) - 1
 
 
+  if weapons[weapon_choice]  == games["win"][0]:
+    print(f"The murderer did use the {weapons[weapon_choice]}!")
+  else:
+   print(f"The murderer did not use the {weapons[weapon_choice]}!")
 
+  print (games["win"][2])
 
-  #weapon_choice = int(input("What weapon do you think was used? Your choices are 1. Drill, 2. Laser Cutter, 3. White Tardis"))
+  suspect_choice = int(input("Who do you think did it? Your choices are 1. Amanda, 2. Thomas, 3. Raymond.")) - 1
 
-  #if weapon_choice != games["win"][0]:
-    #print(f"The murderer did not use {weapon_choice}" )
+  if suspects[suspect_choice]  == games["win"][2]:
+    print(f"Good job! The murderer was {suspects[suspect_choice]}!")
+  else:
+   print(f"The murderer was not {suspects[suspect_choice]}!")
 
-  #elif weapon_choice == games["win"][0]:
-    #print(f"The murderer did use {weapon_choice}")
-    #weapon_choice = games["win"][0]
-
-
-
-  #suspect_choice = int(input("Who do you think did it? Your choices are 1. Amanda, 2. Thomas, 3. Mrs. Gerstein."))
-
-  #if suspect_choice != games["win"][2]:
-    #print(f"The murderer is not {suspect_choice}" )
-
-  #elif suspect_choice == games["win"][2]:
-    #print(f"The murderer is {suspect_choice}")
-    #suspect_choice = games["win"][2]
-
-  #if room_choice == games["win"][1] and weapon_choice == games["win"][0] and suspect_choice == games["win"][2]:
-    #print ("Congrats you won!")
-    #game = False
-
+  if rooms[room_choice] == games["win"][1] and weapons[weapon_choice] == games["win"][0] and suspects[suspect_choice] == games["win"][2]:
+    print ("Congrats you won!")
+    game = False
 
 
 
