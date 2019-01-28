@@ -12,6 +12,7 @@ games = {"win" : (random.choice(weapons), random.choice(rooms), random.choice(su
 name = input ("What is your name Detective? ")
 #print the rules of the game
 print(f"Hey Detective {name}. Let us explain... \n There has been a murder on campus! You need to find out what happened and bring the killer to justice! \n You need to go through a series of options to eventually discover where the murder took place, what weapon was used, and who did it! After each of your guesses, you will be able to rule out some of the options until you finally find out what exactly happened. You will get small hints from the lab to help you guide your search. \n If you guess the wrong suspect 3 times, the Murderer will hunt you down and find you and you will be forced to fight him, win or lose. Don't let it get to that. \n Good luck solving the murder... we are all counting on you! ")
+print(f"Please enter in a number only to choose the room, weapon, and suspect!")
 
 
 #the list of incorrect guesses the user inputs
@@ -272,7 +273,7 @@ while game == True:
     print(f"Murderer has {Murderer.hp} health points left! Keep going!")
 
     #give the player the option to attack the murderer again
-    attack_again = input("Do you want to hit him again or stop fighting?: y/n")
+    attack_again = input("Do you want to hit him again?: y/n")
     # if they say yes, have the murderer and the detective fight and have the detective win and reveal what happened
     # have humans perform actions and change the health accordingly
     if attack_again == 'y':
