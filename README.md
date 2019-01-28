@@ -1,9 +1,12 @@
-# Intro to Programming Final Project - Fall 2018
+##Introduction to Programming Final Project - Magnet Clue Description: In this game a murder has happened at Magnet and it is up to the player to solve the case! Magnet Clue is a game where the computer randomly (out of six choices each) picks a room, a weapon, and a murderer, and it is the job of the player to guess it. After each guess, the player is given a hint as to which room, weapon, or suspect it is. They can also see the choices they have picked incorrectly to help narrow down their search. If they guess the room, weapon, and suspect correctly within three tries, the game is over. If not, the murderer will find and confront them and they will fight until one of them wins.
 
-* Project details are in description.md
-* Replace the content of this file with your own info about your project before the due date
-* Don't forget to fill out the [Project Proposal Form](https://airtable.com/shrrdA41unoBvi6Ki) before break.
 
-## Setting Up Your Repo
+##Citations: https://docs.google.com/document/d/18fMXLeJsrJzSd3XhjOw2B2BJrxBLd_f408Ffx6H8xk8/edit
 
-On the GitHub page for this repository, click the "Fork" button. This will create your own copy of this repository, linked to my original. Use the same cloning method we used before to clone the repository to your PythonAnywhere account
+
+##Flowchart: https://drive.google.com/drive/u/0/folders/1FjRah7w8sTq2JwQ2_9OrdGk-WPGvXaRD
+
+
+##Presentation: https://docs.google.com/presentation/d/1npK2WF0eVOzfdX2JagHO9OkSJ_vlwPQBxCNJjsmhKpk/
+
+
